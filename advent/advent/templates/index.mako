@@ -3,7 +3,7 @@
 <table>
   <tbody>
   %for student in students:
-    <tr><td>${student.name}</td></tr>
+    <tr><td>${student.group_id}</td><td>${student.name}</td></tr>
   %endfor
   </tbody>
 </table>

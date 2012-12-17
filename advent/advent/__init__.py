@@ -9,6 +9,12 @@ def main(global_config, **settings):
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
     config = Configurator(settings=settings, root_factory=".resources.DefaultResource")
+
+    config.add_layout("advent.layouts.RedIndex", template="advent:templates/index.mako", name="red")
+    config.add_layout("advent.layouts.GreenIndex", template="advent:templates/index.mako", name="green")
+    config.add_layout("advent.layouts.BlueIndex", template="advent:templates/index.mako", name="blue")
+    config.add_layout("advent.layouts.YellowIndex", template="advent:templates/index.mako", name="yellow")
+
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('index', '/')
     config.scan()

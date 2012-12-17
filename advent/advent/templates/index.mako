@@ -1,4 +1,8 @@
-<h2> students list</h2>>
+<style type="text/css">
+  ${layout.css}
+</style>
+
+<h2> students list(${layout.description})</h2>>
 
 <table>
   <tbody>

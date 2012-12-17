@@ -15,6 +15,7 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     "alembic", 
+    "pyramid_layout"
     ]
 
 setup(name='advent',

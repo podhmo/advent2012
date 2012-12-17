@@ -2,7 +2,7 @@
   ${layout.css}
 </style>
 
-<h2> students list(${layout.description})</h2>>
+<h2> students list(${layout.description})</h2>
 
 <table>
   <tbody>

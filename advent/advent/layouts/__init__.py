@@ -11,13 +11,13 @@ class RedIndex(IndexLayout):
     description = u"red"
 
 class GreenIndex(IndexLayout):
-    css = u"""td {background-color: #aaffaa;}</style>"""
+    css = u"""td {background-color: #aaffaa;}"""
     description = u"green"
 
 class BlueIndex(IndexLayout):
-    css = u"""td {background-color: #aaaaff;}</style>"""
+    css = u"""td {background-color: #aaaaff;}"""
     description = u"blue"
 
 class YellowIndex(IndexLayout):
-    css = u"""td {background-color: #ffffaa;}</style>"""
+    css = u"""td {background-color: #ffffaa;}"""
     description = u"yellow"    

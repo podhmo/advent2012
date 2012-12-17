@@ -12,6 +12,7 @@ class Group(Base):
 
     id = sa.Column(sa.Integer, primary_key=True)
     name = sa.Column(sa.Unicode(255))
+    short_name = sa.Column(sa.Unicode(32), index=True)
 
 class Student(Base):
     __tablename__ = "students"

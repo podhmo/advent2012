@@ -27,15 +27,16 @@ def main(argv=sys.argv):
     settings = get_appsettings(config_uri)
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
-    Base.metadata.create_all(engine)
+    ## use: $ alembic upgrade head
+    # Base.metadata.create_all(engine)
     with transaction.manager:
         do_initialize()
 
 def do_initialize():
-    g = Group(name=u"Gryffindor")
-    h = Group(name=u"Hufflepuff")
-    r = Group(name=u"Ravenclaw")
-    s = Group(name=u"Slytherin")
+    g = Group(name=u"Gryffindor", short_name=u"red")
+    h = Group(name=u"Hufflepuff", short_name=u"yellow")
+    r = Group(name=u"Ravenclaw", short_name=u"blue")
+    s = Group(name=u"Slytherin", short_name=u"green")
 
     g.students.append(Student(name=u"aaa", grade=1))
     g.students.append(Student(name=u"bbb", grade=1))
